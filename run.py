@@ -124,7 +124,6 @@ def pretrain():
     accelerator.register_for_checkpointing(model)
     accelerator.register_for_checkpointing(optimizer)
     accelerator.register_for_checkpointing(scheduler)
-    for epoch in range(100):_checkpointing(scheduler)
     for epoch in range(100):
         j = 0    
         sampler = ChunkedRandomSampler(train_set, train_size)
